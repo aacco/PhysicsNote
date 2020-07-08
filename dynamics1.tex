@@ -10,6 +10,7 @@
 \newtheorem{lemm}[law]{Lemma}
 \newtheorem{cor}[law]{Corollary}
 \newtheorem{defi}[law]{Definition}
+\newtheorem{cf}[law]{Cf.}
 
 \part{初等力学}
 
@@ -17,7 +18,7 @@
 
 \subsection{基本法則}
 まずNewtonの法則を認める。
-\begin{law}
+\begin{law} \mbox{}\\
 \begin{enumerate}
 \item 質点は、力が作用しない限り、静止または等速直線運動する. \\
 \item 質点の加速度$ {\displaystyle {\vec {a}}} $は、そのとき質点に作用する力$ {\displaystyle {\vec {F}}} $に比例し、質点の質量$ {\displaystyle {m}} $に反比例する. \\
@@ -26,87 +27,96 @@
 \end{law}
 特に、この第二法則は以下に同等である。
 \begin{law}
-\begin{eqnarray*}
-m \ddot{\bm{r}} = \bm{F} \\
-\end{eqnarray*}
+\begin{align*}
+m \ddot{\bm{r}} = \bm{F}
+\end{align*}
 (Leonhard Eulerによる立式)
-
 \end{law}
-Law 1.2より以下が導かれる
-\begin{cor}
-\begin{eqnarray*}
-\frac{d}{dt} (m\bm{v}) &=& \bm{F} \\
-d\dot{\bm{p}} &=& \bm{F}dt \\
-\dot{\bm{p}} &=& \bm{F} \\
-\end{eqnarray*}
-\end{cor}
-ここで$\bm{p}=m\bm{v}$は運動量
 
-\begin{cor}
-\begin{eqnarray*}
-\bm{F} \cdot \bm{v} &=& m \dot{\bm{v}} \cdot \bm{v} \\
-\bm{F} \cdot \bm{v} &=& \frac{d}{dt}(m\bm{v}\bm{\dot{v}}) - m\bm{v}\bm{\dot{v}} \\
-2m\bm{\dot{v}} \cdot \bm{v} &=& \frac{d}{dt}(m\bm{v} \cdot \bm{\dot{v}}) \\
-\bm{F} \cdot \bm{v} &=& \frac{d}{dt} \left( \frac{1}{2}mv^2 \right) \\
-\dot{K} &=& \bm{F} \cdot \bm{v}
-\end{eqnarray*}
-\end{cor}
-ここで$K=\frac{1}{2}mv^2$は運動エネルギー
+\begin{cf}
+一般に$m$は時間の関数であるためLaw 1.2を
+\[
+\frac{d\bm{p}}{dt} = \bm{F} \\
+\]
+とすることがある。
+\end{cf}
 
-\begin{cor}
-\begin{eqnarray*}
-\bm{r} \times m\bm{\dot{v}} &=& \frac{d}{dt}(\bm{r} \times m\bm{v}) - \bm{\dot{r}} \times m\bm{v} \\
-&=& \bm{F} \cdot \bm{v} \\
-\bm{r} \times \bm{F} &=& \frac{d}{dt}(\bm{r} \times \bm{p}) \\
-\dot{\bm{L}} &=& \bm{r} \times \bm{F}
-\end{eqnarray*}
-\end{cor}
-ここで$\bm{L} = \bm{r} \times \bm{p}$は角運動量
-角運動量は方向を含めた回転の勢いに相当する。
-
-以上より
 \begin{theo}
-\begin{eqnarray*}
-\bm{\dot{p}} &=& \bm{F} \\
-\dot{K} &=& \bm{F} \cdot \bm{v} \\
-\bm{\dot{L}} &=& \bm{r} \times \bm{F} \\
-\end{eqnarray*}
+\begin{align*}
+\bm{\dot{p}} &= \bm{F} \tag{1.1} \\
+\dot{K} &= \bm{F} \cdot \bm{v} \tag{1.2} \\
+\bm{\dot{L}} &= \bm{r} \times \bm{F}\tag{1.3} \\
+\end{align*}
 \end{theo}
+
+(1.1) is because
+\begin{align*}
+\frac{d}{dt} (m\bm{v}) &= \bm{F} \\
+d\dot{\bm{p}} &= \bm{F}dt \\
+\dot{\bm{p}} &= \bm{F} \\
+\end{align*}
+ここで$\bm{p}=m\bm{v}$は運動量 \\
+(1.2) is because
+\begin{align*}
+\bm{F} \cdot \bm{v} &= m \dot{\bm{v}} \cdot \bm{v} \\
+\bm{F} \cdot \bm{v} &= \frac{d}{dt}(m\bm{v}\bm{\dot{v}}) - m\bm{v}\bm{\dot{v}} \\
+2m\bm{\dot{v}} \cdot \bm{v} &= \frac{d}{dt}(m\bm{v} \cdot \bm{\dot{v}}) \\
+\bm{F} \cdot \bm{v} &= \frac{d}{dt} \left( \frac{1}{2}mv^2 \right) \\
+\dot{K} &= \bm{F} \cdot \bm{v}
+\end{align*}
+ここで$K=\frac{1}{2}mv^2$は運動エネルギー \\
+(1.3) is because
+\begin{align*}
+\bm{r} \times m\bm{\dot{v}} &= \frac{d}{dt}(\bm{r} \times m\bm{v}) - \bm{\dot{r}} \times m\bm{v} \\
+&= \bm{F} \cdot \bm{v} \\
+\bm{r} \times \bm{F} &= \frac{d}{dt}(\bm{r} \times \bm{p}) \\
+\dot{\bm{L}} &= \bm{r} \times \bm{F}
+\end{align*}
+ここで$\bm{L} = \bm{r} \times \bm{p}$は角運動量
+であり方向を含めた回転の勢いに相当する。
+
 
 \subsection{重心系}
 一般に粒子系の運動は代表される点による重心系と静止系に分けて解釈することもできる.
 ここで系の重力モーメント和により重心$ \bm{r_G} $を以下で定義する.
 
-\begin{eqnarray*}
-\bm{M_G} &=& \sum_i \bm{r_i} \times m_i \bm{g} \\
-&=& \frac{\sum_i \bm{r_i} \times m_i}{M_{total}} M_{total} \bm{g} \\
-&=& \bm{r_G} \times M_{total} \bm{g}
-\end{eqnarray*}
+\begin{align*}
+\bm{M_G} &= \sum_i \bm{r_i} \times m_i \bm{g} \\
+&= \frac{\sum_i \bm{r_i} \times m_i}{M_{total}} M_{total} \bm{g} \\
+&= \bm{r_G} \times M_{total} \bm{g}
+\end{align*}
 
-\begin{defi} \label{defi:CenterOfGravity}
+\begin{defi}
 $$\bm{r}_G =  \frac{\sum_i \bm{r_i} \times m_i}{M_{total}}$$
 \end{defi}
 
-さて全運動量$ \bm{P} $について
-
+\begin{theo}
+全運動量$ \bm{P}_{\forall} $について
 \begin{eqnarray*}
-\bm{P} &=& \sum_i \bm{p} \\
+\bm{P}_{\forall} &=& \bm{P_G}
+\end{eqnarray*}
+\end{theo}
+because
+\begin{eqnarray*}
+\bm{P}_{\forall} &=& \sum_i \bm{p} \\
 &=& M_{total} \frac{\sum_i m_i \bm{v_i}}{M_{total}} \\
 &=& M_{total} \bm{v_G} \\
 &=& \bm{P_G}
 \end{eqnarray*}
 
-またDefinition \ref{defi:CenterOfGravity}より
-
 \begin{theo}
+系内部運動量$\bm{P}_{in}$について
+\begin{eqnarray*}
+\bm{P_{in}} = \bm{0}
+\end{eqnarray*}
+\end{theo}
+because
 \begin{eqnarray*}
 \bm{r}_G &=& \frac{\sum_i \bm{r_i} \times m_i}{M_{total}} \\
 \sum_i m_i(\bm{r_i} - \bm{r_G}) &=& \bm{0} \\
-\sum_i m_i\bm{r_{iG}} &=& \bm{0} \\
+\sum_i m_i\bm{r}_{iG} &=& \bm{0} \\
 \bm{P_{in}} &=& \sum_i m_i \bm{v}_{iG} =\bm{0}
 \end{eqnarray*}
-\end{theo}
-
 ここで以下に注意.
 
 \begin{eqnarray*}
