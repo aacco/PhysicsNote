@@ -1,0 +1,154 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage{bm}
+\usepackage{amsmath}
+
+
+\begin{document}
+
+\newtheorem{law}{Law}[section]
+\newtheorem{theo}[law]{Theorem}
+\newtheorem{lemm}[law]{Lemma}
+\newtheorem{cor}[law]{Corollary}
+\newtheorem{defi}[law]{Definition}
+
+\part{初等力学}
+
+\section{力学量の考察}
+
+\subsection{基本法則}
+まずNewtonの法則を認める。
+\begin{law}
+\begin{enumerate}
+\item 質点は、力が作用しない限り、静止または等速直線運動する. \\
+\item 質点の加速度$ {\displaystyle {\vec {a}}} $は、そのとき質点に作用する力$ {\displaystyle {\vec {F}}} $に比例し、質点の質量$ {\displaystyle {m}} $に反比例する. \\
+\item 二つの質点 1, 2 の間に相互に力が働くとき、質点 2 から質点 1 に作用する力$ {\displaystyle {{\vec {F}}_{21}}} $と、質点 1 から質点 2 に作用する力$ {\displaystyle {\vec {F}}_{12}} $は、大きさが等しく、逆向きである。
+\end{enumerate}
+\end{law}
+特に、この第二法則は以下に同等である。
+\begin{law}
+\begin{eqnarray*}
+m \ddot{\bm{r}} = \bm{F} \\
+\end{eqnarray*}
+(Leonhard Eulerによる立式)
+
+\end{law}
+Law 1.2より以下が導かれる
+\begin{cor}
+\begin{eqnarray*}
+\frac{d}{dt} (m\bm{v}) &=& \bm{F} \\
+d\dot{\bm{p}} &=& \bm{F}dt \\
+\dot{\bm{p}} &=& \bm{F} \\
+\end{eqnarray*}
+\end{cor}
+ここで$\bm{p}=m\bm{v}$は運動量
+
+\begin{cor}
+\begin{eqnarray*}
+\bm{F} \cdot \bm{v} &=& m \dot{\bm{v}} \cdot \bm{v} \\
+\bm{F} \cdot \bm{v} &=& \frac{d}{dt}(m\bm{v}\bm{\dot{v}}) - m\bm{v}\bm{\dot{v}} \\
+2m\bm{\dot{v}} \cdot \bm{v} &=& \frac{d}{dt}(m\bm{v} \cdot \bm{\dot{v}}) \\
+\bm{F} \cdot \bm{v} &=& \frac{d}{dt} \left( \frac{1}{2}mv^2 \right) \\
+\dot{K} &=& \bm{F} \cdot \bm{v}
+\end{eqnarray*}
+\end{cor}
+ここで$K=\frac{1}{2}mv^2$は運動エネルギー
+
+\begin{cor}
+\begin{eqnarray*}
+\bm{r} \times m\bm{\dot{v}} &=& \frac{d}{dt}(\bm{r} \times m\bm{v}) - \bm{\dot{r}} \times m\bm{v} \\
+&=& \bm{F} \cdot \bm{v} \\
+\bm{r} \times \bm{F} &=& \frac{d}{dt}(\bm{r} \times \bm{p}) \\
+\dot{\bm{L}} &=& \bm{r} \times \bm{F}
+\end{eqnarray*}
+\end{cor}
+ここで$\bm{L} = \bm{r} \times \bm{p}$は角運動量
+角運動量は方向を含めた回転の勢いに相当する。
+
+以上より
+\begin{theo}
+\begin{eqnarray*}
+\bm{\dot{p}} &=& \bm{F} \\
+\dot{K} &=& \bm{F} \cdot \bm{v} \\
+\bm{\dot{L}} &=& \bm{r} \times \bm{F} \\
+\end{eqnarray*}
+\end{theo}
+
+\subsection{重心系}
+一般に粒子系の運動は代表される点による重心系と静止系に分けて解釈することもできる.
+ここで系の重力モーメント和により重心$ \bm{r_G} $を以下で定義する.
+
+\begin{eqnarray*}
+\bm{M_G} &=& \sum_i \bm{r_i} \times m_i \bm{g} \\
+&=& \frac{\sum_i \bm{r_i} \times m_i}{M_{total}} M_{total} \bm{g} \\
+&=& \bm{r_G} \times M_{total} \bm{g}
+\end{eqnarray*}
+
+\begin{defi} \label{defi:CenterOfGravity}
+$$\bm{r}_G =  \frac{\sum_i \bm{r_i} \times m_i}{M_{total}}$$
+\end{defi}
+
+さて全運動量$ \bm{P} $について
+
+\begin{eqnarray*}
+\bm{P} &=& \sum_i \bm{p} \\
+&=& M_{total} \frac{\sum_i m_i \bm{v_i}}{M_{total}} \\
+&=& M_{total} \bm{v_G} \\
+&=& \bm{P_G}
+\end{eqnarray*}
+
+またDefinition \ref{defi:CenterOfGravity}より
+
+\begin{theo}
+\begin{eqnarray*}
+\bm{r}_G &=& \frac{\sum_i \bm{r_i} \times m_i}{M_{total}} \\
+\sum_i m_i(\bm{r_i} - \bm{r_G}) &=& \bm{0} \\
+\sum_i m_i\bm{r_{iG}} &=& \bm{0} \\
+\bm{P_{in}} &=& \sum_i m_i \bm{v}_{iG} =\bm{0}
+\end{eqnarray*}
+\end{theo}
+
+ここで以下に注意.
+
+\begin{eqnarray*}
+M_{total} = \sum_i m_i \\
+\bm{v_G} は重心速度 \\
+\bm{P_G} は重心運動量 \\
+\bm{P}_{in}　は内部運動量
+\end{eqnarray*}
+また添字$iG$は系内での量を表す。
+
+\subsubsection{重心運動方程式}
+\begin{theo}
+\begin{eqnarray*}
+M_{tot} \dot{\bm{v}_G} &=& \sum_i \bm{f^{out}}_i \\
+\end{eqnarray*}
+\end{theo}
+because 
+\begin{eqnarray*}
+\sum_i \bm{F}_i &=& M_{tot} \frac{\sum_i m_i \bm{v}_i}{M_{tot}} \\
+ &=& M_{tot} \dot{\bm{v}_G} \\
+ &=& \sum_i \bm{f^{out}}_i \\
+ &=& \dot{\bm{P}_G}
+\end{eqnarray*}
+これによると各粒子への外力は重心系そのものへの外力と同等である。
+
+\begin{theo}
+粒子全体の運動エネルギー$K_E$について \\
+$$
+K_E = K_G + K_{in}
+$$
+\end{theo}
+because
+\begin{eqnarray*}
+K_E &=& \sum_i \frac{1}{2}m_i \bm{v}^2_i \\
+&=& \sum_i \frac{1}{2}m_i \bm{v_G+v_{iG}}^2 \\
+&=& \frac{1}{2}M_{tot}\bm{v}_G + \sum_i m_i \bm{v}_G \bm{v}_{iG} + \frac{1}{2}\sum_i m_i \bm{v}^2_{iG} \\
+&=& \underbrace{\frac{1}{2}M_{tot}\bm{v}_G}_{K_G:重心K_E} + \underbrace{\frac{1}{2}\sum_i m_i \bm{v}^2_{iG}}_{K_{in}:内部K_E} \\
+\end{eqnarray*}
+
+\end{document}
+
+
+%\begin{eqnarray*}
+%\end{eqnarray*}
+
