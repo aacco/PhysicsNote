@@ -1,10 +1,7 @@
 # PhysicsNote
-aaccoとkuma437による物理ノートの再編集版です.
-
-
-<予想見取り図>
-
+.gitingoreも参照
 	/PhysicsNote
+		.gitignore
 		README.md
 		master.tex
 		

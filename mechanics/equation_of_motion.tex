@@ -145,8 +145,17 @@ $$
     K_E &= \sum_i \frac{1}{2} m_i |\bm{v}_i|^2
     = \sum_i \left( \frac{1}{2} m_i | \bm{v}_G + \bm{v}_{iG} |^2 \right)\\
     &= \frac{1}{2} M_{tot} |\bm{v}_G|^2 + \sum_i ( m_i \bm{v}_G \cdot \bm{v}_{iG} ) + \frac{1}{2} \sum_i m_i |\bm{v}_{iG}|^2 \\
-    &= \frac{1}{2} M_{tot} |\bm{v}_G|^2 + \bm{v}_G \cdot \dot{\bm{P}}_{in} + \frac{1}{2} \sum_i m_i |\bm{v}_{iG}|^2 \\
+    &= \frac{1}{2} M_{tot} |\bm{v}_G|^2 + \bm{v}_G \cdot \bm{P}_{in} + \frac{1}{2} \sum_i m_i |\bm{v}_{iG}|^2 \\
     &= \underbrace{\frac{1}{2} M_{tot} |\bm{v}_G|^2}_{K_G:重心K_E} + \underbrace{\frac{1}{2} \sum_i m_i |\bm{v}_{iG}|^2}_{K_{in}:内部K_E} \\
   \end{align*}
 \end{proof}
+
+\begin{cor}
+$K_E, K_G, K_{in}$ について \\
+\begin{align*}
+\dot{K}_G &= \left( \sum_i \bm{f}_i \right) \cdot \bm{v}_G \\
+\dot{K}_{in} &= \sum_i \bm{f}^{out}_i \cdot \bm{v}_{iG} + \sum\sum_{i<j} \bm{F}_{ij} (\bm{v}_i - \bm{v}_j)
+\end{align*}
+\end{cor}
+
 \end{document}
