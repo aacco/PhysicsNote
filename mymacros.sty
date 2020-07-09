@@ -1,0 +1,22 @@
+\usepackage{ascmac,amsmath,amssymb,tikz,tcolorbox,mathtools,bm}
+\usepackage{latexsym}
+\def\qed{\hfill $\Box$}
+\tcbuselibrary{breakable,skins,theorems}
+\newtheorem{THR}{定理}
+\newtheorem{defn}[subsubsection]{定義}
+\newtheorem{proposition}[subsubsection]{命題}
+\newtheorem{theorem1}[subsubsection]{定理}
+\newtheorem{lemma1}[subsubsection]{補題}
+\newtheorem{corrolary1}[subsubsection]{系}
+\newtheorem{axiom1}[subsubsection]{公理}
+\newtheorem{prf}[subsubsection]{証明}
+\newtheorem{ans}{解答}
+\newtheorem{ans*}{解答}
+\newtheorem{ans1}[subsection]{解答}
+\renewcommand{\labelenumi}{$(\arabic{enumi})$}
+\newenvironment{dfn}[2]{\begin{tcolorbox}[title = \begin{defn}{#1}\end{defn},colbacktitle=green!80!yellow!70!black,colback = white,fonttitle = \bfseries,breakable = true]{#2}}{\end{tcolorbox}}
+\newenvironment{prop}[2]{\begin{tcolorbox}[title = \begin{proposition}{#1}\end{proposition},colbacktitle=blue!60!white,colback = white,fonttitle = \bfseries,breakable = true]{#2}}{\end{tcolorbox}}
+\newenvironment{thr}[2]{\begin{tcolorbox}[title = \begin{theorem1}{#1}\end{theorem1},colbacktitle=red!40!orange!80!white,colback = white,fonttitle = \bfseries,breakable = true]{#2}}{\end{tcolorbox}}
+\newenvironment{lem}[2]{\begin{tcolorbox}[title = \begin{lemma1}{#1}\end{lemma1},colbacktitle=red!70!blue!80!white,colback = white,fonttitle = \bfseries,breakable = true]{#2}}{\end{tcolorbox}}
+\newenvironment{cor}[2]{\begin{tcolorbox}[title = \begin{corrolary1}{#1}\end{corrolary1},colbacktitle=red!50!yellow!60!white,colback = white,fonttitle = \bfseries,breakable = true]{#2}}{\end{tcolorbox}}
+\newenvironment{axm}[2]{\begin{tcolorbox}[title = \begin{axiom1}{#1}\end{axiom1},colbacktitle=blue!50!green!60!white,colback = white,fonttitle = \bfseries,breakable = true]{#2}}{\end{tcolorbox}}
