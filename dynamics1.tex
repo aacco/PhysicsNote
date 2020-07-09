@@ -1,16 +1,66 @@
-\documentclass[dvipdfmx]{jsarticle}
+\documentclass[dvipdfmx,uplatex]{jsarticle}
 \usepackage{bm}
-\usepackage{amsmath}
+\usepackage{amsmath,amsfonts,amsthm,mathtools,thmtools,comment}
 
+\declaretheoremstyle[
+spaceabove=6pt,spacebelow=6pt,
+headfont=\normalfont\bfseries,
+notefont=\normalfont,notebraces={(}{)},
+bodyfont=\normalfont,
+postheadspace=\newline,
+numbered=no,
+qed=\qedsymbol,
+headpunct={}
+]{prf}
+
+\makeatletter
+\@addtoreset{equation}{section}
+\def\theequation{\thesection.\arabic{equation}}
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{law}{Law}[section]
+\newtheorem{theo}[law]{Thm.}
+\newtheorem{lemm}[law]{Lem.}
+\newtheorem{cor}[law]{Cor.}
+\newtheorem{defi}[law]{Def.}
+\newtheorem{cf}[law]{Cf.}
+\renewcommand{\proofname}{$\mathbf{Prf}$}
 
 \begin{document}
 
-\newtheorem{law}{Law}[section]
-\newtheorem{theo}[law]{Theorem}
-\newtheorem{lemm}[law]{Lemma}
-\newtheorem{cor}[law]{Corollary}
-\newtheorem{defi}[law]{Definition}
-\newtheorem{cf}[law]{Cf.}
+\begin{comment}
+
+\part{数学的基礎} #test
+
+\section{ユークリッド空間}
+
+\subsection{ベクトル空間}
+
+\begin{defi}\mbox{}\\
+  $K = \mathbb{R}$または$\mathbb{C}$とし，$V$を集合とする．
+\end{defi}
+
+\begin{defi}\mbox{}\\
+  $V$を$\mathbb{K}$上のベクトル空間とする．次の公理を満たす実数値関数$||\cdot||_V \colon V \to \mathbb{R}$が$V$の任意の元$x$に対して定義されているとき，$||x||_V$を$x$のノルムといい，$V$をノルム空間という．ただし，$x,y$は任意の$V$の元，$\alpha$は任意の$\mathbb{K}$の元とする．
+  \begin{enumerate}
+    \item[(N.1)] $||x|| \geq 0$
+    \item[(N.2)] $||x|| = 0 \iff x = 0$
+    \item[(N.3)] $||\alpha x|| = |\alpha| ||x||$
+    \item[(N.4)] $||x + y|| \leq ||x|| + ||y||$
+  \end{enumerate}
+\end{defi}
+(N.4)は三角不等式と呼ばれている．
+
+\begin{cor}\mbox{}\\
+  $V$の元$x_1,x_2,\dots,x_n$について，次が成り立つ．
+  \begin{align*}
+    \left\| \sum_i^n x_i \right\| \leq \sum_i^n \| x_i \|\\
+    \Bigl| \| x \| - \| y \| \Bigr| \leq \| x - y \|
+  \end{align*}
+\end{cor}
+
+\end{comment}
 
 \part{初等力学}
 
@@ -18,128 +68,134 @@
 
 \subsection{基本法則}
 まずNewtonの法則を認める。
-\begin{law} \mbox{}\\
+\begin{law}\mbox{}
 \begin{enumerate}
-\item 質点は、力が作用しない限り、静止または等速直線運動する. \\
-\item 質点の加速度$ {\displaystyle {\vec {a}}} $は、そのとき質点に作用する力$ {\displaystyle {\vec {F}}} $に比例し、質点の質量$ {\displaystyle {m}} $に反比例する. \\
-\item 二つの質点 1, 2 の間に相互に力が働くとき、質点 2 から質点 1 に作用する力$ {\displaystyle {{\vec {F}}_{21}}} $と、質点 1 から質点 2 に作用する力$ {\displaystyle {\vec {F}}_{12}} $は、大きさが等しく、逆向きである。
+\item 質点は，力が作用しない限り，静止または等速直線運動する.
+\item 質点の加速度$\overrightarrow{a}$は、そのとき質点に作用する力の大きさ$\left|{\overrightarrow{F}}\right|$に比例し、質点の質量$m$に反比例する.
+\item 二つの質点 1，2 の間に相互に力が働くとき，質点 2 から質点 1 に作用する力$\overrightarrow{F_{21}}$と，質点 1 から質点 2 に作用する力$\overrightarrow{F_{12}}$は，大きさが等しく，向きである．
 \end{enumerate}
 \end{law}
-特に、この第二法則は以下に同等である。
-\begin{law}
-\begin{align*}
-m \ddot{\bm{r}} = \bm{F}
-\end{align*}
+特に，この第二法則は以下に同等である．
+\begin{law}[第2法則の言い換え]\label{law:2}
+
+\begin{align}
+m \ddot{\bm{r}} = \bm{F} \label{equation-of-motion}
+\end{align}
 (Leonhard Eulerによる立式)
 \end{law}
 
-\begin{cf}
-一般に$m$は時間の関数であるためLaw 1.2を
-\[
-\frac{d\bm{p}}{dt} = \bm{F} \\
-\]
-とすることがある。
+\begin{cf}\label{cf:1.3}\mbox{}\\
+  一般に$m$は時間の関数であるため\rm{Law}\ref{law:2}を運動量$\bm{p} \coloneqq m \bm{v}$を用いて，
+  \begin{equation*}
+    \frac{d\bm{p}}{dt} = \bm{F}
+  \end{equation*}
+  とすることがある．
 \end{cf}
 
-\begin{theo}
-\begin{align*}
-\bm{\dot{p}} &= \bm{F} \tag{1.1} \\
-\dot{K} &= \bm{F} \cdot \bm{v} \tag{1.2} \\
-\bm{\dot{L}} &= \bm{r} \times \bm{F}\tag{1.3} \\
-\end{align*}
+\begin{theo}\mbox{}\\
+  運動量$\bm{p} \coloneqq m \bm{v}$，運動エネルギー$K \coloneqq \dfrac{1}{2} m |\bm{v}|^2$，角運動量$\bm{L} \coloneqq \bm{r} \times \bm{p}$に対して，
+  \begin{align}
+    \bm{\dot{p}} &= \bm{F} \label{eq:1.2}\\
+    \dot{K} &= \bm{F} \cdot \bm{v} \label{eq:1.3} \\
+    \bm{\dot{L}} &= \bm{r} \times \bm{F} \label{eq:1.4}
+  \end{align}
+  が成り立つ．
 \end{theo}
 
-(1.1) is because
-\begin{align*}
-\frac{d}{dt} (m\bm{v}) &= \bm{F} \\
-d\dot{\bm{p}} &= \bm{F}dt \\
-\dot{\bm{p}} &= \bm{F} \\
-\end{align*}
-ここで$\bm{p}=m\bm{v}$は運動量 \\
-(1.2) is because
-\begin{align*}
-\bm{F} \cdot \bm{v} &= m \dot{\bm{v}} \cdot \bm{v} \\
-\bm{F} \cdot \bm{v} &= \frac{d}{dt}(m\bm{v}\bm{\dot{v}}) - m\bm{v}\bm{\dot{v}} \\
-2m\bm{\dot{v}} \cdot \bm{v} &= \frac{d}{dt}(m\bm{v} \cdot \bm{\dot{v}}) \\
-\bm{F} \cdot \bm{v} &= \frac{d}{dt} \left( \frac{1}{2}mv^2 \right) \\
-\dot{K} &= \bm{F} \cdot \bm{v}
-\end{align*}
-ここで$K=\frac{1}{2}mv^2$は運動エネルギー \\
-(1.3) is because
-\begin{align*}
-\bm{r} \times m\bm{\dot{v}} &= \frac{d}{dt}(\bm{r} \times m\bm{v}) - \bm{\dot{r}} \times m\bm{v} \\
-&= \bm{F} \cdot \bm{v} \\
-\bm{r} \times \bm{F} &= \frac{d}{dt}(\bm{r} \times \bm{p}) \\
-\dot{\bm{L}} &= \bm{r} \times \bm{F}
-\end{align*}
+\begin{proof}\mbox{}
+  \begin{enumerate}
+    \item[(\ref{eq:1.2})] $\mathbf{Cf}$\ref{cf:1.3}.より明らか．
+    \item[(\ref{eq:1.3})] (\ref{equation-of-motion})の両辺に$\bm{v}$を内積すると
+    \begin{align*}
+      \bm{F} \cdot \bm{v} = m \dot{\bm{v}} \cdot \bm{v} = \frac{d}{dt} \left( \frac{1}{2} m | \bm{v} |^2 \right) = \dot{K}
+    \end{align*}
+    \item[(\ref{eq:1.4})] (\ref{equation-of-motion})の両辺に左から$\bm{r}$を外積すると
+    \begin{align*}
+      \bm{r} \times \bm{F} = \bm{r} \times \dot{\bm{p}} = \dot{\bm{L}} - \dot{\bm{r}} \times \bm{p}
+    \end{align*}
+    ここで，$\bm{v} = \dot{\bm{r}}$と$\bm{p}$は平行だから，最右辺の第二項は$\bm{0}$となる．ゆえに，
+    \begin{equation*}
+      \bm{r} \times \bm{F} = \dot{\bm{L}}
+    \end{equation*}
+  \end{enumerate}
+\end{proof}
+
 ここで$\bm{L} = \bm{r} \times \bm{p}$は角運動量
 であり方向を含めた回転の勢いに相当する。
 
 
 \subsection{重心系}
 一般に粒子系の運動は代表される点による重心系と静止系に分けて解釈することもできる.
-ここで系の重力モーメント和により重心$ \bm{r_G} $を以下で定義する.
+ここで系の重力モーメント和により重心$\bm{r}_G$を以下で定義する.
 
 \begin{align*}
-\bm{M_G} &= \sum_i \bm{r_i} \times m_i \bm{g} \\
-&= \frac{\sum_i \bm{r_i} \times m_i}{M_{total}} M_{total} \bm{g} \\
-&= \bm{r_G} \times M_{total} \bm{g}
+  \bm{M}_G &= \sum_i (\bm{r_i} \times m_i \bm{g}) = \frac{\sum\limits_i m_i \bm{r_i}}{M_{total}} \times M_{total} \bm{g} = \bm{r_G} \times M_{total} \bm{g}
 \end{align*}
 
 \begin{defi}
-$$\bm{r}_G =  \frac{\sum_i \bm{r_i} \times m_i}{M_{total}}$$
+  \begin{align*}
+    \bm{r}_G =  \frac{\sum\limits_i m_i \bm{r_i}}{M_{total}}
+  \end{align*}
 \end{defi}
 
-\begin{theo}
-全運動量$ \bm{P}_{\forall} $について
-\begin{eqnarray*}
-\bm{P}_{\forall} &=& \bm{P_G}
-\end{eqnarray*}
+\begin{theo}\mbox{}\\
+  全運動量$ \bm{P}_{\forall} $について
+  \begin{equation*}
+    \bm{P}_{\forall} = \bm{P_G}
+  \end{equation*}
+  が成り立つ．
 \end{theo}
-because
-\begin{eqnarray*}
-\bm{P}_{\forall} &=& \sum_i \bm{p} \\
-&=& M_{total} \frac{\sum_i m_i \bm{v_i}}{M_{total}} \\
-&=& M_{total} \bm{v_G} \\
-&=& \bm{P_G}
-\end{eqnarray*}
 
-\begin{theo}
-系内部運動量$\bm{P}_{in}$について
-\begin{eqnarray*}
-\bm{P_{in}} = \bm{0}
-\end{eqnarray*}
+\begin{proof}
+  \begin{align*}
+    \bm{P}_{\forall} = \sum_i \bm{p} = M_{total} \cdot \frac{\sum\limits_i m_i \bm{v_i}}{M_{total}} = M_{total} \bm{v}_G = \bm{P_G}
+  \end{align*}
+\end{proof}
+
+\begin{theo}\mbox{}\\
+  系内部運動量$\bm{P}_{in}$について
+  \begin{equation*}
+    \bm{P}_{in} = \bm{0}
+  \end{equation*}
+  が常に成り立つ．
 \end{theo}
-because
-\begin{eqnarray*}
-\bm{r}_G &=& \frac{\sum_i \bm{r_i} \times m_i}{M_{total}} \\
-\sum_i m_i(\bm{r_i} - \bm{r_G}) &=& \bm{0} \\
-\sum_i m_i\bm{r}_{iG} &=& \bm{0} \\
-\bm{P_{in}} &=& \sum_i m_i \bm{v}_{iG} =\bm{0}
-\end{eqnarray*}
+
+\begin{proof}
+  \begin{align*}
+    \bm{r}_G = \frac{\sum\limits_i m_i \bm{r_i}}{M_{total}} \iff \sum_i m_i (\bm{r}_i - \bm{r}_G) = \bm{0}\\
+  \end{align*}
+  ここで，$\bm{v}_{iG} \coloneqq \bm{v}_i - \bm{v}_G$とすると，
+  \begin{align*}
+    \sum_i m_i \bm{r}_{iG} = \bm{0} \iff \bm{P_{in}} \coloneqq \sum_i m_i \bm{v}_{iG} = \bm{0}
+  \end{align*}
+\end{proof}
+
 ここで以下に注意.
 
 \begin{eqnarray*}
-M_{total} = \sum_i m_i \\
-\bm{v_G} は重心速度 \\
-\bm{P_G} は重心運動量 \\
-\bm{P}_{in}　は内部運動量
+  M_{total} = \sum_i m_i \\
+  \bm{v_G} は重心速度 \\
+  \bm{P_G} は重心運動量 \\
+  \bm{P}_{in}　は内部運動量
 \end{eqnarray*}
+
 また添字$iG$は系内での量を表す。
 
 \subsubsection{重心運動方程式}
 \begin{theo}
-\begin{eqnarray*}
-M_{tot} \dot{\bm{v}_G} &=& \sum_i \bm{f^{out}}_i \\
-\end{eqnarray*}
+  \begin{eqnarray*}
+    M_{tot} \dot{\bm{v}}_G &=& \sum_i \bm{f}^{out}_i \\
+  \end{eqnarray*}
 \end{theo}
-because 
-\begin{eqnarray*}
-\sum_i \bm{F}_i &=& M_{tot} \frac{\sum_i m_i \bm{v}_i}{M_{tot}} \\
- &=& M_{tot} \dot{\bm{v}_G} \\
- &=& \sum_i \bm{f^{out}}_i \\
- &=& \dot{\bm{P}_G}
-\end{eqnarray*}
+
+\begin{proof}
+  \begin{align*}
+    \sum_i \bm{F} = \sum_i m_i \bm{v}_i
+    = M_{tot} \cdot \frac{\sum\limits_i m_i \bm{v}_i}{M_{tot}}
+    = M_{tot} \dot{\bm{v}}_G = \sum_i \bm{f}_i^{out} = \dot{\bm{P}}
+  \end{align*}
+\end{proof}
+
 これによると各粒子への外力は重心系そのものへの外力と同等である。
 
 \begin{theo}
@@ -148,17 +204,14 @@ $$
 K_E = K_G + K_{in}
 $$
 \end{theo}
-because
-\begin{eqnarray*}
-K_E &=& \sum_i \frac{1}{2}m_i \bm{v}^2_i \\
-&=& \sum_i \frac{1}{2}m_i \bm{v_G+v_{iG}}^2 \\
-&=& \frac{1}{2}M_{tot}\bm{v}_G + \sum_i m_i \bm{v}_G \bm{v}_{iG} + \frac{1}{2}\sum_i m_i \bm{v}^2_{iG} \\
-&=& \underbrace{\frac{1}{2}M_{tot}\bm{v}_G}_{K_G:重心K_E} + \underbrace{\frac{1}{2}\sum_i m_i \bm{v}^2_{iG}}_{K_{in}:内部K_E} \\
-\end{eqnarray*}
 
+\begin{proof}
+  \begin{align*}
+    K_E &= \sum_i \frac{1}{2} m_i |\bm{v}_i|^2
+    = \sum_i \left( \frac{1}{2} m_i | \bm{v}_G + \bm{v}_{iG} |^2 \right)\\
+    &= \frac{1}{2} M_{tot} |\bm{v}_G|^2 + \sum_i ( m_i \bm{v}_G \cdot \bm{v}_{iG} ) + \frac{1}{2} \sum_i m_i |\bm{v}_{iG}|^2 \\
+    &= \frac{1}{2} M_{tot} |\bm{v}_G|^2 + \bm{v}_G \cdot \dot{\bm{P}}_{in} + \frac{1}{2} \sum_i m_i |\bm{v}_{iG}|^2 \\
+    &= \underbrace{\frac{1}{2} M_{tot} |\bm{v}_G|^2}_{K_G:重心K_E} + \underbrace{\frac{1}{2} \sum_i m_i |\bm{v}_{iG}|^2}_{K_{in}:内部K_E} \\
+  \end{align*}
+\end{proof}
 \end{document}
-
-
-%\begin{eqnarray*}
-%\end{eqnarray*}
-
