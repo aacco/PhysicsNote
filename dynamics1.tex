@@ -1,31 +1,5 @@
 \documentclass[dvipdfmx,uplatex]{jsarticle}
-\usepackage{bm}
-\usepackage{amsmath,amsfonts,amsthm,mathtools,thmtools,comment}
-
-\declaretheoremstyle[
-spaceabove=6pt,spacebelow=6pt,
-headfont=\normalfont\bfseries,
-notefont=\normalfont,notebraces={(}{)},
-bodyfont=\normalfont,
-postheadspace=\newline,
-numbered=no,
-qed=\qedsymbol,
-headpunct={}
-]{prf}
-
-\makeatletter
-\@addtoreset{equation}{section}
-\def\theequation{\thesection.\arabic{equation}}
-\makeatother
-
-\theoremstyle{definition}
-\newtheorem{law}{Law}[section]
-\newtheorem{theo}[law]{Thm.}
-\newtheorem{lemm}[law]{Lem.}
-\newtheorem{cor}[law]{Cor.}
-\newtheorem{defi}[law]{Def.}
-\newtheorem{cf}[law]{Cf.}
-\renewcommand{\proofname}{$\mathbf{Prf}$}
+\usepackage{macros}
 
 \begin{document}
 
