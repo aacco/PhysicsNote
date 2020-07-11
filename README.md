@@ -1,5 +1,7 @@
 # PhysicsNote
 .gitingoreも参照
+
+
 	/PhysicsNote
 		.gitignore
 		README.md
