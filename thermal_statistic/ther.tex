@@ -1,7 +1,7 @@
-\documentclass{dvipdfmx,uplatex}[jsarticle]
-\usepackage{macros.sty}
-
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\usepackage{macros}
 %熱力学-現代的な視点から [著:田崎晴明]
+
 \begin{document}
 これは『熱力学-現代的な視点から』[著:田崎晴明]によるものである.
 \subsection{熱力学}
@@ -11,24 +11,24 @@
 X = (V,N) \\
 \]
 と書くことで系の状態が簡潔に表せる.
-\begin{def}
+\begin{defi}
 ある系の変数$X = (V,N)$と別の系の$X' = (V',N')$の値$V,N,V',N'$に関して合併系の変数$X+X'$が
 \[
-X + X' = (V+V', N+N') \\
+X + X' = (V+V', N+N') 
 \]
 を満たすときこれらは相加的(additive)であるという.
-\end{def}
+\end{defi}
 
-\begin{def}
-系を\lambda 倍したとき同様に\lambda倍される量は示量的(extensive)であるという.
-\end{def}
+\begin{defi}
+系を定数倍したとき同様に定数倍される量は示量的(extensive)であるという.
+\end{defi}
 とりわけ熱力学では体積$V$と物質量$N$が測定できる示量変数であることが重要である.
 \begin{cf}
 相加的かつ示量的な量は線形性を持つという.
 \end{cf}
-\begin{def}
+\begin{defi}
 系全体を定数倍しても不変な量は示強的(intensive)であるという.
-\end{def}
+\end{defi}
 
 
 以下,blackbox化された熱的系内の状態を示量変数により理解することが目下の課題である.
@@ -36,13 +36,13 @@ X + X' = (V+V', N+N') \\
 \begin{law}
 熱的系をある環境下に置き,示量変数を固定し十分な時間が経過すると系は平衡状態になる.また同環境での系の平衡状態は示量変数の組の値のみで決まる.
 \end{law}
-\begin{def}
+\begin{defi}
 系の状態が$f(t)$で表されるとして,系が平衡であるとは \\
 \[
 \dot{f(t)} = 0 \\
 \]
 であることをいう.
-\end{def}
+\end{defi}
 \begin{law}
 環境は変数:温度$T$を持つ.環境における同系の平衡状態は$T$によってのみ決まる.
 \end{law}
@@ -53,10 +53,10 @@ X + X' = (V+V', N+N') \\
 \end{theo}
 実際のところ,超臨界流体など特殊な系ではこれは成り立たない.
 
-\begin{def}
+\begin{defi}
 $(T;X)$が成す空間を状態空間(平衡状態空間)という. \\
 平衡量により確定する量を状態量あるいは熱力学関数という.
-\end{def}
+\end{defi}
 ここでいう空間は数学におけるところのそれである.
 
 \subsubsection{断熱系}
