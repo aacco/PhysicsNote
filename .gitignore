@@ -1,2 +1,4 @@
 *.dvi
 *.swp
+*.aux
+*.log

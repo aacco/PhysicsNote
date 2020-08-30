@@ -1,0 +1,81 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\usepackage{macros}
+
+\begin{document}
+\subsection{Maxwell方程式}
+\begin{theo}
+\begin{align}
+\nabla \cdot \vec{E} &= \dfrac{\rho}{\varepsilon}\\
+\nabla \cdot \vec{B} &= 0\\
+\nabla \times \vec{E} &= -\dfrac{\partial \vec{B}}{\partial t}\\
+\nabla \times \vec{B} &= \mu\varepsilon \dfrac{\partial \vec{E}}{\partial t} + \mu\vec{j}
+\end{align}
+\end{theo}
+
+\subsubsection{Gaussの法則}
+\begin{theo}
+\[
+\int_S \bm{E} \cdot \bm{n} ds = \frac{Q}{\varepsilon _0}
+\]
+\end{theo}
+
+\subsubsection{Amp\`{e}reの法則}
+\begin{theo}[アンペールの法則] \mbox{}\\
+\[
+\oint_{\partial S} \bm{H} \cdot d \bm{l} = \int_S \bm{J} \cdot d \bm{S} = I \\
+\]
+ただし、\\
+H	: 磁場の強さ,
+J	: 電流密度,
+I	: 積分領域 S を貫く総電流,
+dl	: 線素ベクトル,
+dS	: 面素ベクトル,
+$\partial S$	: 面Sの境界 \\
+\end{theo}
+またこれゆえに
+\[
+\mathrm{rot} \bm{H} = \nabla \times \bm{H} = \bm{J} \\
+\]
+
+\subsubsection{Faradayの電磁誘導の法則}
+\begin{theo}
+\[
+V = -N \frac{\Delta \Phi}{\Delta t} \\
+\]
+(Nは巻き数)\\
+さらに
+\[
+\oint_S \bm{E} \cdot d\bm{s} = - \frac{d \Phi _B}{dt}\\
+\]
+\[
+\nabla \times \bm{E} = - \frac{\partial \bm{B}}{\partial t}
+\]
+\end{theo}
+
+\subsection{静電磁場}
+
+\subsubsection{静電ポテンシャル}
+
+\subsubsection{ポアソン方程式}
+
+\subsubsection{定常電流}
+
+\subsubsection{ビオ・サバールの法則}
+\begin{theo}[ビオ・サバールの法則] \mbox{} \\
+微小な長さの電流要素$I d\bm{l} $によって$ \bm{r} $離れた位置に作られる微小な磁場$ d\bm{H} $は
+\[
+d\bm{H} = \frac{Id\bm{l} \times \bm{r}}{4 \pi r^3} = \frac{Id\bm{l}}{4 \pi r^2} \times \frac{\bm{r}}{r} \\
+\]
+\end{theo}
+
+\subsubsection{アンペール力,ローレンツ力}
+
+\subsubsection{コンデンサー}
+
+\subsection{動電磁場}
+
+\subsection{回路}
+
+\subsubsection{キルヒホッフの法則}
+
+\end{document}
