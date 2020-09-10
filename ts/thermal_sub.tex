@@ -1,0 +1,95 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\usepackage{macros}
+\usepackage{siunitx}
+
+\begin{document}
+\subsection{分子運動論}
+\begin{align*}
+\Delta \langle \bm{p} \rangle &= \langle \bm{F} t \rangle \\
+&= nN_A \times 2m \langle v_x \rangle \times \frac{\langle v_x\rangle t}{2l} \\
+\langle \bm{F} \rangle &= \frac{nN_A m \langle v_x^2 \rangle}{l} \\
+P &= \frac{F}{S} = \frac{nN_A m \langle v_x^2 \rangle}{l^3} \\
+PV &= nN_a m \langle v_x^2 \rangle \\
+&= \frac{1}{3} nN_A m \langle v^2 \rangle \\
+&= nRT \\
+\end{align*}
+これを比較すると
+\begin{align*}
+nRT &= \frac{2}{3} nN_a \frac{1}{2} m \langle v^2 \rangle \\
+\frac{3RT}{2N_A} &= \frac{1}{2} m \langle v^2 \rangle \\
+\frac{3}{2}k_bT &= \frac{1}{2} m \langle v^2 \rangle\\
+\end{align*}
+\begin{defi}[温度Tの定義]
+\[
+ \frac{3}{2}k_bT = \frac{1}{2} m \langle v^2 \rangle\\
+\]
+$k_B$はボルツマン定数:
+\[
+k_B = \frac{R}{N_A} = \SI{1.38e-23}{\joule \per \kelvin}
+\]
+\end{defi}
+
+\subsection{内部エネルギー}
+\begin{defi}[内部エネルギー]
+内部エネルギーは系の運動エネルギーと位置エネルギーの和をいう.
+特に理想気体では以下.
+\[
+U = \frac{1}{2}m \langle v^2 \rangle \times N
+\]
+\end{defi}
+\begin{align*}
+U &= \frac{1}{2}m \langle v^2 \rangle \times N \\
+&= \frac{3}{2}k_BT \times N \\
+&= \frac{3}{2}nRT \\
+&= \frac{3}{2}pV
+\end{align*}
+また内部エネルギーは系の温度によって決まる.
+
+\subsection{モル比熱}
+\begin{table}[htb]
+\begin{center}
+	\begin{tabular}{|llll|}
+		&Q	&$\Delta U$	&$W_{out}$ \\ \hline
+	定積	&$nC_v \Delta T$	&$nC_v \Delta T$&0 \\
+	定圧	&$nC_p \Delta T$	&$nC_v \Delta T$&$P \Delta V$\\
+	等温	&Q&0&$W^*$\\
+	断熱	&0&$nC_v \Delta T$ &$-nC_v \Delta T$\\
+	一般	&Q&$nC_v \Delta T$&(P-Vグラフ)
+	\end{tabular}
+\end{center}
+\end{table}
+\begin{defi}[モル比熱] \mbox{} \\
+$\SI{1}{\mole}$の気体を$\SI{1}{\kelvin}$上昇させるのに要する熱量
+\[
+C = \frac{Q}{n \Delta T} 
+\]
+\end{defi}
+\begin{theo}[単原子理想気体の定積モル比熱]
+\[
+C_V = \frac{3}{2}R
+\]
+\end{theo}
+単原子理想気体で定積変化を考えると
+\[
+Q = \Delta U = nC_V \Delta T
+\]
+これと
+\[
+\Delta U = \frac{3}{2}nR \Delta T
+\]
+を比較して
+\[
+C_V = \frac{3}{2} R
+\]
+を得る.(単原子理想気体の定積モル比熱)
+これより
+
+\begin{theo}[Mayerの関係式]
+\[
+C_P =C_V + R
+\]
+\end{theo}
+
+
+
+\end{document}
