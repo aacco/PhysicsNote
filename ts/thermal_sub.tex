@@ -1,65 +1,72 @@
 \documentclass[dvipdfmx,uplatex]{jsarticle}
 \usepackage{macros}
 \usepackage{siunitx}
+\usepackage{amssymb}
+
 
 \begin{document}
 \subsection{分子運動論}
+一辺が$l$の立方体の系を考えると
 \begin{align*}
 \Delta \langle \bm{p} \rangle &= \langle \bm{F} t \rangle \\
 &= nN_A \times 2m \langle v_x \rangle \times \frac{\langle v_x\rangle t}{2l} \\
-\langle \bm{F} \rangle &= \frac{nN_A m \langle v_x^2 \rangle}{l} \\
-P &= \frac{F}{S} = \frac{nN_A m \langle v_x^2 \rangle}{l^3} \\
-PV &= nN_a m \langle v_x^2 \rangle \\
-&= \frac{1}{3} nN_A m \langle v^2 \rangle \\
-&= nRT \\
+\therefore \langle \bm{F} \rangle &= \frac{nN_A m \langle v_x^2 \rangle}{l} \\
 \end{align*}
-これを比較すると
+ゆえに
 \begin{align*}
-nRT &= \frac{2}{3} nN_a \frac{1}{2} m \langle v^2 \rangle \\
-\frac{3RT}{2N_A} &= \frac{1}{2} m \langle v^2 \rangle \\
-\frac{3}{2}k_bT &= \frac{1}{2} m \langle v^2 \rangle\\
+P &= \frac{\langle F \rangle}{S} = \frac{nN_A m \langle v_x^2 \rangle}{l^3}, \\
+\therefore PV &= nN_a m \langle v_x^2 \rangle \\
+&= \frac{1}{3} nN_A m \langle v^2 \rangle \\
+\end{align*}
+これを理想気体の状態方程式（実験則）と比較すると
+\begin{align*}
+nRT &= \frac{2}{3} nN_A \frac{1}{2} m \langle v^2 \rangle \\
+\therefore \frac{3RT}{2N_A} &= \frac{1}{2} m \langle v^2 \rangle \\
+\therefore \frac{3}{2}k_BT &= \frac{1}{2} m \langle v^2 \rangle\\
 \end{align*}
 \begin{defi}[温度Tの定義]
 \[
  \frac{3}{2}k_bT = \frac{1}{2} m \langle v^2 \rangle\\
 \]
-$k_B$はボルツマン定数:
+ここで$k_B$はボルツマン定数:
 \[
 k_B = \frac{R}{N_A} = \SI{1.38e-23}{\joule \per \kelvin}
 \]
 \end{defi}
 
 \subsection{内部エネルギー}
-\begin{defi}[内部エネルギー]
-内部エネルギーは系の運動エネルギーと位置エネルギーの和をいう.
+\begin{defi}[内部エネルギー] \mbox{} \\
+系の運動エネルギーと位置エネルギーの和を内部エネルギーという. \\
 特に理想気体では以下.
 \[
 U = \frac{1}{2}m \langle v^2 \rangle \times N
 \]
 \end{defi}
+\begin{cor}[内部エネルギーの表現]
 \begin{align*}
 U &= \frac{1}{2}m \langle v^2 \rangle \times N \\
 &= \frac{3}{2}k_BT \times N \\
 &= \frac{3}{2}nRT \\
-&= \frac{3}{2}pV
+&= \frac{3}{2}PV
 \end{align*}
-また内部エネルギーは系の温度によって決まる.
+これによると内部エネルギーは系の温度によって決まり,反応の経路によらない.
+\end{cor}
 
 \subsection{モル比熱}
 \begin{table}[htb]
 \begin{center}
-	\begin{tabular}{|llll|}
-		&Q	&$\Delta U$	&$W_{out}$ \\ \hline
-	定積	&$nC_v \Delta T$	&$nC_v \Delta T$&0 \\
-	定圧	&$nC_p \Delta T$	&$nC_v \Delta T$&$P \Delta V$\\
-	等温	&Q&0&$W^*$\\
-	断熱	&0&$nC_v \Delta T$ &$-nC_v \Delta T$\\
-	一般	&Q&$nC_v \Delta T$&(P-Vグラフ)
+	\begin{tabular}{|l|lll|}
+		&Q =	&$\Delta U$	&$+W_{out}$ \\ \hline
+	定積変化	&$nC_v \Delta T$	&$nC_v \Delta T$&0 \\
+	定圧変化	&$nC_p \Delta T$	&$nC_v \Delta T$&$P \Delta V$\\
+	等温変化	&Q&0&$W^*$\\
+	断熱変化	&0&$nC_v \Delta T$ &$-nC_v \Delta T$\\
+	一般変化	&Q&$nC_v \Delta T$&(P-Vグラフ)
 	\end{tabular}
 \end{center}
 \end{table}
 \begin{defi}[モル比熱] \mbox{} \\
-$\SI{1}{\mole}$の気体を$\SI{1}{\kelvin}$上昇させるのに要する熱量
+$\SI{1}{\mole}$の気体を$\SI{1}{\kelvin}$上昇させるのに要する熱量をモル比熱という.
 \[
 C = \frac{Q}{n \Delta T} 
 \]
@@ -82,14 +89,65 @@ Q = \Delta U = nC_V \Delta T
 C_V = \frac{3}{2} R
 \]
 を得る.(単原子理想気体の定積モル比熱)
-これより
+
 
 \begin{theo}[Mayerの関係式]
 \[
 C_P =C_V + R
 \]
 \end{theo}
+定圧変化において,熱力学第一法則より
+\[
+nC_p \Delta T = nC_v \Delta T + P \Delta V
+\]
+ここで$P \Delta V = nR \Delta T$の平衡を保つ反応においては上式から$n \Delta T$を除して
+\[
+C_p = C_v + R
+\]
+を得る.
 
 
+\begin{theo}[Poissonの法則]
+平衡を保った断熱変化において,以下が成り立つ.
+\begin{align*}
+PV^{\gamma} = \mathrm{const.} \\
+TV^{\gamma -1} = \mathrm{const.} \\
+\frac{P^{\gamma -1}}{T^{\gamma}} = \mathrm{const.} \\
+\end{align*}
+ここで$\gamma = \frac{C_p}{C_v}$である
+\end{theo} 
+系の変化:$(P,V,T) \rightarrow (P + \Delta P,V + \Delta V,T + \Delta T)$について
+\[
+\frac{\Delta P}{P} + \frac{\Delta V}{V} = \frac{\Delta T}{T}
+\]
+が一次近似的に成り立つ.
+\begin{align*}
+\because (P + \Delta P)(V + \Delta V) &= nR (T + \Delta T) \\
+\end{align*}
+また
+\[
+\frac{dU}{U} = \frac{dT}{T} = - \frac{Rw_{out}}{C_vPV} = -\frac{RdV}{C_vV}
+\]
+\[
+\therefore \int \frac{dT}{T} = - \frac{R}{C_v} \int \frac{dV}{V}
+\]
+\[
+\therefore \log TV^{\frac{R}{C_v}} = \mathrm{const.}
+\]
+\[
+\therefore TV^{\gamma - 1} = \mathrm{const.}
+\]
+ほかにも
+\begin{align*}
+ -\frac{RdV}{C_vV} = \frac{dT}{T} &= \frac{d P}{P} + \frac{d V}{V} \\
+ \therefore \frac{d P}{P} + \gamma \frac{d V}{V} &= 0 \\
+ \therefore PV^{\gamma} &= \mathrm{const.}
+\end{align*}
+
+\begin{align*}
+ \frac{dT}{T} + \frac{RdV}{C_vV} &= \gamma \frac{dT}{T} - \frac{R}{C_v} \frac{d P}{P} = 0 \\
+ \therefore \frac{T^{\gamma}}{P^{\gamma -1}} &= \mathrm{const.}
+\end{align*}
+のようにして得られる.
 
 \end{document}
