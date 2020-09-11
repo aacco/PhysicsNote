@@ -1,4 +1,5 @@
 # PhysicsNote
+共著者を探しています。思うところがあればぜひご一報ください！
 
 ##directory structure
 
@@ -18,10 +19,11 @@
 			shm.tex
 		/analytical
 		
-		/t_s
-		
-		/electromagnetics
-		
+		/ts (thermal_statistic)
+			ther.tex
+			thermal_sub.tex	
+		/em (electro-magnetism)
+			em.tex	
 		/quantum
 		
 		/particles
