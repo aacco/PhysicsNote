@@ -1,8 +1,8 @@
-This is e-upTeX, Version 3.14159265-p3.8.2-u1.25-190908-2.6 (utf8.uptex) (TeX Live 2019/Debian) (preloaded format=uplatex 2020.7.4)  11 JUL 2020 13:06
+This is e-upTeX, Version 3.14159265-p3.8.2-u1.25-190908-2.6 (utf8.uptex) (TeX Live 2019/Debian) (preloaded format=uplatex 2020.9.12)  12 SEP 2020 16:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**equation_of_motion.tex shm.tex
+**equation_of_motion.tex
 (./equation_of_motion.tex
 pLaTeX2e <2020-02-02u03>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14>
@@ -46,8 +46,7 @@ LaTeX Info: Redefining \LaTeX on input line 147.
 LaTeX Info: Redefining \LaTeXe on input line 200.
 )
 \heisei=\count174
-) (./macros.sty
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (../macros.sty (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip50
 
@@ -133,7 +132,8 @@ Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 \symboldmincho=\mathgroup10
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 209.
-) (./docmute.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/docmute/docmute.sty
 Package: docmute 2012/03/22 v1.4 Input stand-alone documents
 )
 (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thmtools.sty
@@ -214,22 +214,115 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen172
 \l_MT_below_shortintertext_sep=\dimen173
 )
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-02-14 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
+File: l3backend-dvipdfmx.def 2020-02-03 L3 backend support: dvipdfmx
+\g__graphics_track_int=\count192
+\l__pdf_internal_box=\box64
+\g__pdf_backend_object_int=\count193
+\g__pdf_backend_annotation_int=\count194
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-02-14 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count195
+\g__xparse_grabber_int=\count196
+\l__xparse_m_args_int=\count197
+\l__xparse_v_nesting_int=\count198
+)
+Package: siunitx 2020/01/15 v2.7u A comprehensive (SI) units package
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen174
+\ar@mcellbox=\box65
+\extrarowheight=\dimen175
+\NC@list=\toks30
+\extratabsurround=\skip60
+\backup@length=\skip61
+\ar@cellbox=\box66
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-02-14 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box67
+\l__siunitx_tmp_dim=\dimen176
+\l__siunitx_tmp_int=\count199
+\l__siunitx_number_mantissa_length_int=\count266
+\l__siunitx_number_uncert_length_int=\count267
+\l__siunitx_round_int=\count268
+\l__siunitx_process_decimal_int=\count269
+\l__siunitx_process_uncertainty_int=\count270
+\l__siunitx_process_fixed_int=\count271
+\l__siunitx_process_integer_min_int=\count272
+\l__siunitx_process_precision_int=\count273
+\l__siunitx_group_min_int=\count274
+\l__siunitx_angle_marker_box=\box68
+\l__siunitx_angle_unit_box=\box69
+\l__siunitx_angle_marker_dim=\dimen177
+\l__siunitx_angle_unit_dim=\dimen178
+\l__siunitx_unit_int=\count275
+\l__siunitx_unit_denominator_int=\count276
+\l__siunitx_unit_numerator_int=\count277
+\l__siunitx_unit_prefix_int=\count278
+\l__siunitx_unit_prefix_base_int=\count279
+\l__siunitx_unit_prefix_gram_int=\count280
+\l__siunitx_number_product_int=\count281
+\c__siunitx_one_fill_skip=\skip62
+\l__siunitx_table_unit_align_skip=\skip63
+\l__siunitx_table_exponent_dim=\dimen179
+\l__siunitx_table_integer_dim=\dimen180
+\l__siunitx_table_mantissa_dim=\dimen181
+\l__siunitx_table_marker_dim=\dimen182
+\l__siunitx_table_result_dim=\dimen183
+\l__siunitx_table_uncert_dim=\dimen184
+\l__siunitx_table_fill_pre_dim=\dimen185
+\l__siunitx_table_fill_post_dim=\dimen186
+\l__siunitx_table_fill_mid_dim=\dimen187
+\l__siunitx_table_pre_box=\box70
+\l__siunitx_table_post_box=\box71
+\l__siunitx_table_mantissa_box=\box72
+\l__siunitx_table_result_box=\box73
+\l__siunitx_table_number_align_skip=\skip64
+\l__siunitx_table_text_align_skip=\skip65
+
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty
+Package: translator 2019-05-31 v1.12a Easy translation of strings in LaTeX
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
+))
+\Gin@req@height=\dimen188
+\Gin@req@width=\dimen189
+)
 Package thmtools Info: Key `numbered' (with value `no')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=prf' on input line 12.
+(thmtools)             that uses `style=prf' on input line 25.
 Package thmtools Info: Key `qed' (with value `\qedsymbol ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=prf' on input line 12.
-\c@law=\count192
-)
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
-File: l3backend-dvipdfmx.def 2020-02-03 L3 backend support: dvipdfmx
-\g__graphics_track_int=\count193
-\l__pdf_internal_box=\box64
-\g__pdf_backend_object_int=\count194
-\g__pdf_backend_annotation_int=\count195
+(thmtools)             that uses `style=prf' on input line 25.
+\c@law=\count282
 )
 (./equation_of_motion.aux)
 \openout1 = `equation_of_motion.aux'.
@@ -253,27 +346,34 @@ LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
+-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-Package graphics Info: Driver file: dvipdfmx.def on input line 105.
+\docmute@nestinglevel=\count283
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 6.47278pt on input line 4.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 4.62341pt on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
-File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
-))
-\Gin@req@height=\dimen174
-\Gin@req@width=\dimen175
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-\docmute@nestinglevel=\count196
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 4.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 6.47278pt on input line 4.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 4.62341pt on input line 4.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 11.09619pt on input line 5.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
@@ -294,26 +394,6 @@ LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
 (Font)              Font shape `JY2/gt/m/n' tried instead on input line 7.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 9.24683pt on input line 7.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 10.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 10.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 10.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 10.
 LaTeX Font Info:    Font shape `JT2/mc/m/it' in size <10> not available
 (Font)              Font shape `JT2/mc/m/n' tried instead on input line 41.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
@@ -327,12 +407,12 @@ LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 ] [2] [3] [4]
 (./equation_of_motion.aux) ) 
 Here is how much of TeX's memory you used:
- 3017 strings out of 482787
- 44458 string characters out of 5957709
- 297109 words of memory out of 5000000
- 18296 multiletter control sequences out of 15000+600000
- 543137 words of font info for 78 fonts, out of 8000000 for 9000
+ 6208 strings out of 482787
+ 127979 string characters out of 5957708
+ 362464 words of memory out of 5000000
+ 21452 multiletter control sequences out of 15000+600000
+ 544241 words of font info for 83 fonts, out of 8000000 for 9000
  314 hyphenation exceptions out of 8191
- 41i,16n,31p,297b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,16n,44p,289b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on equation_of_motion.dvi (4 pages, 10248 bytes).
+Output written on equation_of_motion.dvi (4 pages, 10128 bytes).
