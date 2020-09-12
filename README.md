@@ -17,25 +17,41 @@ tex->dvi->pdf
 	/PhysicsNote
 		.gitignore
 		README.md
-		master.tex
 		
-		/math
+		/analytical (解析力学)
+
+		/em (電磁気学)
+			em.tex	
+		
+		/master (目次)
+			master.tex
+
+		/math (前提の数学概念)
 			pre.tex		
-		/mechanics
+
+		/mechanics (初等力学)
 			equation_of_motion.tex
 			shm.tex
-		/analytical
 		
-		/ts (thermal_statistic)
+		/others (その他)
+			column.tex
+
+		/particles　(素粒子論)
+
+		/quantum (量子力学)
+
+		/relativism (相対論)
+
+		/sty (TeXのstyファイルを格納)
+			macros.sty
+			mymacros.sty
+
+		/ts (熱,統計力学)
 			tasaki.tex	
 			th.tex
-		/em (electro-magnetism)
-			em.tex	
-		/quantum
 		
-		/particles
 		
-		/relativism
+
 
 
 #指針に替えて
