@@ -1,12 +1,18 @@
 # PhysicsNote
+
 ちょっとづつ作成していきます。
 共著者を探しています。思うところがあればぜひご一報ください！
 
-##directory structure
+## 読み方
 
-###注意
+ノートを各ディレクトリ内にPDFファイルとしてまとめてあります.
+tex->dvi->pdf
 
-.gitingoreも参照:マクロや一部ファイルはcommitから排している.
+## directory structure
+
+### 注意
+
+.gitingoreも参照:マクロや一部ファイルはcommitから排しています.
 
 	/PhysicsNote
 		.gitignore
