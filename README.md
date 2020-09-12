@@ -1,4 +1,5 @@
 # PhysicsNote
+ちょっとづつ作成していきます。
 共著者を探しています。思うところがあればぜひご一報ください！
 
 ##directory structure
@@ -20,8 +21,8 @@
 		/analytical
 		
 		/ts (thermal_statistic)
-			ther.tex
-			thermal_sub.tex	
+			tasaki.tex	
+			th.tex
 		/em (electro-magnetism)
 			em.tex	
 		/quantum
