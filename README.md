@@ -3,9 +3,9 @@
 共著者を探しています。思うところがあればぜひご一報ください！
 
 ##directory structure
+各ディレクトリ内にPDFファイルとしてまとめてあります.
 
 ###注意
-
 .gitingoreも参照:マクロや一部ファイルはcommitから排している.
 
 	/PhysicsNote
