@@ -2,3 +2,7 @@
 *.swp
 *.aux
 *.log
+/*.dvi
+/*.swp
+/*.aux
+/*.log
