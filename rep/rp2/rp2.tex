@@ -1,0 +1,53 @@
+\documentclass[a4paper,11pt]{jsarticle}
+
+
+% 数式
+\usepackage{amsmath,amsfonts}
+\usepackage{bm}
+% 画像
+\usepackage[dvipdfmx]{graphicx}
+
+
+\begin{document}
+
+\title{物理学演習第一 レポート第二回}
+\author{nクラス 21B12938 布施太翔}
+\date{\today}
+\maketitle
+\newpage
+
+【1.1.2項 問5】 \\
+
+(1.31)では2粒子が相互作用できる，同じ系に存在しているかもしれないことが分かる．\\
+(1.35)では2粒子の運動方程式が独立しているので，互いに相互作用しない，独立した系に2粒子があることが分かる．\\
+\\
+
+【1.2.2項 問6】 \\
+
+a) \\
+スケール変換後の速度と加速度は連鎖律より
+\begin{align*}
+  \bm{v}'(t') &= \frac{\mathrm{d} \bm{x}'(t')}{\mathrm{d} t'} \\
+  &= \frac{\mathrm{d} \lambda \bm{x}(t)}{\mathrm{d}t} \frac{\mathrm{d} t}{\mathrm{d} t'} \\
+  &= \frac{\lambda}{\nu} \dot{\bm{x}}(t) \\
+  \bm{a}'(t') &= \frac{\mathrm{d} \bm{v}'(t')}{\mathrm{d} t'} \\
+  &= \frac{\mathrm{d} \lambda \bm{v}(t)}{\nu \mathrm{d}t} \frac{\mathrm{d} t}{\mathrm{d} t'} \\
+  &= \frac{\lambda}{\nu^2} \ddot{\bm{x}}(t) \\
+\end{align*}
+となる．
+
+b) \\
+スケール変換(1.91)の下で運動方程式(1.37)が不変になる条件は
+\begin{align*}
+  \ddot{\bm{x}}(t) &= \bm{f}(\bm{x}(t), \dot{\bm{x}}(t); t) \\
+  \ddot{\bm{x}}'(t') &= \bm{f}(\lambda \bm{x}(t), \frac{\lambda}{\nu} \dot{\bm{x}}(t); \nu t)
+  = \frac{\lambda}{\nu^2} \ddot{\bm{x}}(t)
+\end{align*}
+この2式が恒等であること．よって求める条件は
+\begin{align*}
+  \frac{\nu^2}{\lambda} \bm{f}(\lambda \bm{x}(t), \frac{\lambda}{\nu} \dot{\bm{x}}(t); \nu t)
+  = \bm{f}(\bm{x}(t), \dot{\bm{x}}(t); t)
+\end{align*}
+である．
+
+\end{document}

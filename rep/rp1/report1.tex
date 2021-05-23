@@ -1,0 +1,101 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\usepackage{../sty/macros}
+
+\begin{document}
+
+注:以下では，
+\[
+	\bm{\psi} = 
+		\begin{pmatrix}
+		x\\
+		y\\
+		z
+		\end{pmatrix},
+	\bm{\varphi} =
+		\begin{pmatrix}
+		u\\
+		v\\
+		w
+		\end{pmatrix}
+\]
+とする．（二次元の場合は第2行まで）
+
+\subsubsection{問1}
+\[
+	\bm{\psi} = 
+		\begin{pmatrix}
+		x \\
+		y	
+		\end{pmatrix}
+\]
+とすると
+\[
+	^* \bm{\psi} = 
+		\begin{pmatrix}
+		y\\
+		-x	
+		\end{pmatrix}
+\]
+であるが，これらには
+\[
+	y-xi = (x+yi) \left( \cos \left(-\frac{\pi}{2}\right)+i \sin \left(-\frac{\pi}{2}\right)\right)
+\]
+の関係がなりたつ．よって題意は示せた．
+
+\subsubsection{問3}
+クロス積の定義より，
+\[
+	\bm{\psi} \times \bm{\psi} = 
+		\begin{pmatrix}
+		x\\
+		y\\
+		z
+		\end{pmatrix}
+	\times
+		\begin{pmatrix}
+		x\\
+		y\\
+		z
+		\end{pmatrix} =	
+		\begin{pmatrix}
+		yz-zy\\
+		zx-xz\\
+		xy-yx
+		\end{pmatrix}
+		= \bm{0}
+\]
+よって(A.30)は示せた．
+(A.31):
+\begin{align*}
+	\bm{\varphi} \cdot ( \bm{\varphi} \times \bm{\psi}) &=
+		\begin{pmatrix}
+		u\\
+		v\\
+		w
+		\end{pmatrix} \cdot
+		\begin{pmatrix}
+		vz - wy\\
+		wx-uz\\
+		uy-vx
+		\end{pmatrix} \\
+		&= u(vz-wy)+v(wx-uz)+w(uy-vx)\\
+		&= 0
+\end{align*}
+よって(A.31)は示せた．
+
+\subsubsection{問6\footnote{参考文献;数研出版;基礎からのチャート式}}
+(B.67)の式を$g(x)$,(B.71)の式を$h(x)$とおくと，
+\begin{align*}
+	g(x) &= \frac{\dff f(x)}{\dff x} \\
+	&= \lim_{\varepsilon \rightarrow 0} \frac{f(x+\frac{\varepsilon}{2})-f(x- \frac{\varepsilon}{2})}{\varepsilon} \\
+	&= \lim_{\varepsilon \rightarrow 0} \frac{f(x+\frac{\varepsilon}{2})-f(x)+f(x)-f(x- \frac{\varepsilon}{2})}{\frac{\varepsilon}{2}+\frac{\varepsilon}{2}}
+\end{align*}
+ここで，$\varepsilon \rightarrow 0$ならば$\frac{\varepsilon}{2} \rightarrow 0$であるから
+\begin{align*}
+	g(x) &= \lim_{\frac{\varepsilon}{2} \rightarrow 0} \left( \frac{f(x+\frac{\varepsilon}{2})-f(x)}{\varepsilon} + \frac{f(x-\frac{\varepsilon}{2})-f(x)}{\varepsilon} \right)
+	&= \frac{h(x)}{2} + \frac{h(x)}{2}
+	&= h(x)
+\end{align*}
+よって(B.67)と(B.71)は等しい．
+
+\end{document}
