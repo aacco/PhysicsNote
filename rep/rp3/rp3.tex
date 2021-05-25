@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{jsarticle}
+\documentclass[dvipdfmx,uplatex,a4paper,11pt]{jsarticle}
 
 
 % 数式
@@ -29,16 +29,106 @@ c) \\
   \bm{a}'(t')=\frac{\lambda}{\nu^2}\bm{a}_0
 \end{align*}
 である．
-これは$$b)$$を満たすので不変性を持つ．\\
+これは$b)$を満たすので不変性を持つ．\\
 
 d) \\
 \begin{align*}
-  \bm{f}(\bm{x}(t),\bm{v}(t);t)&=- \omega^2 \bm{x}(t)
+  \bm{f}(\bm{x}(t),\bm{v}(t);t)&=- \omega^2 \bm{x}(t) \\
   \bm{f}(\bm{x}'(t'),\bm{v}'(t');t')&=- \omega^2 \lambda \bm{x}(t)
 \end{align*}
 である．これは\\
 $\nu=1$のとき，$b)$を満たし不変性を持つが，\\
-$\nu \neq 1$のとき$b)$を満たさないので不変性を持たない．\\
+$\nu \neq 1$のとき，$b)$を満たさないので不変性を持たない．\\
+
+\newpage
+
+【1.3.2項 問2】 \\
+
+仮定(1.25)から
+\begin{align*}
+  \bm{v} = \bm{f}(\bm{x}(t);t)
+\end{align*}
+と書ける． \\
+空間一様性より，
+\begin{align*}
+  \bm{v} = \bm{f}(t)
+\end{align*}
+空間等方性より，任意の，$\bm{x}$と同じ次数の正方行列$\mathbb{P}$について
+\begin{align*}
+  \bm{f}(\bm{x}(t);t) = \mathbb{P}^{-1} \bm{f}(\mathbb{P} \bm{x}(t);t)
+\end{align*}
+であることにより，
+\begin{align*}
+  \bm{f}(t) = \mathbb{P}^{-1} \bm{f}(t)
+\end{align*}
+これが任意の$\mathbb{P}$で成り立つためには
+\begin{align*}
+  \bm{v} = \bm{f} = \bm{f}(t) = 0
+\end{align*}
+が必要十分である．これは孤立粒子は静止し続け，等速直線運動は許されないことを示している． \\
+
+【1.3.2項 問2】 \\
+ 
+絶対時間の過程より，
+\begin{align*}
+  U=U'=0,C=C'=1
+\end{align*}
+である．
+(1.117)より
+\begin{align*}
+  \left(
+  \begin{matrix}
+    R & -V \\
+    -U & C \\
+  \end{matrix}
+  \right)^{-1}
+  &=
+  \left(
+  \begin{matrix}
+    R' & -V' \\
+    -U' & C' \\
+  \end{matrix} 
+  \right) \\
+  \left(
+  \begin{matrix}
+    R & -V \\
+    -U & C \\
+  \end{matrix}
+  \right)
+  \cdot 
+  \left(
+  \begin{matrix}
+    R' & -V' \\
+    -U' & C' \\
+  \end{matrix}
+  \right)
+  &=
+  \left(
+  \begin{matrix}
+    RR' & -RV'-V \\
+    0 & 1 \\
+  \end{matrix}
+  \right)
+  =
+  E_2
+\end{align*}
+よって
+\begin{align*}
+  R' = R^{-1}, V' = -R^{-1}V
+\end{align*}
+である．
+ここで，この関係が(1.111)でなく(1.138)の時に成り立つものであることを考えると，
+\begin{align*}
+  R' = R^{-1} = 1, V' = -R^{-1}V = V
+\end{align*}
+がわかる．
+(1.114),(1.116)と以上より，それぞれ
+\begin{align*}
+  V &= v - v' \\
+  V' &= v' - v \\
+  V' &= -V
+\end{align*}
+を得る．
 
 
 \end{document}
